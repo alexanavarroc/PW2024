@@ -1,0 +1,9 @@
+<mensaje id="123456">
+    <titulo hora="8:15am" provider="Sensor LG-1500S"> Sensor de humedad AB123 </titulo>
+    <nombre-sensor> Parcela 5 </nombre-sensor>
+    <contenido> Humedad normal </contenido>
+    <valor> 45.5 </valor>
+    <activo></activo>
+    <fechaDeLectura> 2024-02-05 </fechaDeLectura>
+</mensaje>
+
