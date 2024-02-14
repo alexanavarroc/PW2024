@@ -4,30 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2 HTML</title>
+    <style>
+        table{
+         width: 500px;
+         height: 500px; 
+         border: 5px solid black;
+
+        }
+
+        .columna1{
+            border: 1px black;
+            text-align: center;
+            border: 1px solid black;
+
+        }
+        tr > td{
+            background-color: rgb(70, 118, 172);
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        tr>td:first-child{
+            background-color: rgb(117, 202, 91);
+            border: 2px solid black;
+            padding: 10px;
+        }
+       
+    </style>
 </head>
 <body>
     
-<table style="width: 500px; height: 500px; border: 5px solid black;">
+<table>
     <tr>
         <td colspan="6" style="background-color: rgb(143, 199, 46); text-align: center; border: 1px solid black;"> COMPARATIVA DE PRODUCTOS</td>
     </tr>
     <tr style="background-color: rgb(143, 199, 46);">
         <td style="border: 1px black; color: white; text-align: center; border: 1px solid black;"> </td>
-        <td style="border: 1px black;
-        color: white; text-align: center; text-align: center;">Mi producto 1</td>
-        <td style="border: 1px black; text-align: center;
-        color: white; text-align: center; text-align: center;">Mi producto 2</td>
-        <td style="border: 1px black; text-align: center;
-        color: white; text-align: center; text-align: center;">Mi producto 3</td>
-        <td style="border: 1px black; text-align: center;
-        color: white; text-align: center; text-align: center;">Mi producto 4</td>
-        <td style="border: 1px black; text-align: center;
-        color: white; text-align: center; text-align: center;">Mi producto 5</td>
+        <td >Mi producto 1</td>
+        <td >Mi producto 2</td>
+        <td >Mi producto 3</td>
+        <td >Mi producto 4</td>
+        <td >Mi producto 5</td>
 
     </tr>
     <tr style="background-color: rgb(143, 199, 46);" >
-    <td style="border: 1px black; text-align: center; border: 1px solid black;">Característica 1</td>
-    <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
+    <td>Característica 1</td>
+    <td style="border: 1px black; background-color: azure; text-align: center;" >✅</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
@@ -38,7 +62,7 @@
 
     </tr>
     <tr style="background-color: rgb(143, 199, 46);" >
-    <td style="border: 1px black; text-align: center;border: 1px solid black;">Característica 2</td>
+    <td>Característica 2</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">❌</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
@@ -49,7 +73,7 @@
     </tr>
     </tr>
     <tr style="background-color: rgb(143, 199, 46);" >
-    <td style="border: 1px black; text-align: center; border: 1px solid black;">Característica 3</td>
+    <td >Característica 3</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
@@ -59,7 +83,7 @@
     </tr>
     </tr>
     <tr style="background-color: rgb(143, 199, 46);" >
-    <td style="border: 1px black; text-align: center; border: 1px solid black;">Característica 4</td>
+    <td >Característica 4</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">❌</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
     <td style="border: 1px black; background-color: azure; text-align: center;">✅</td>
