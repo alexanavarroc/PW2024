@@ -7,13 +7,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   
     <title>Document</title>
+    <style>
+      /*estilo de tipo id, para nuestra imagen*/
+      #avatar{
+        max-width: 200px;
+        max-height: 200px;
+        margin-top: 20px;
+        border: 5px rgb(189, 178, 133) solid;
+      }
+
+      /*estipo tipo class*/
+      .claseTarjeta{
+      
+      width: 500px;
+      top: 80px;
+      box-shadow: 1px 1px 10px rgb(123,114,255);
+      display: flex;
+      align-items: center;
+
+      }
+
+
+
+    </style>
 </head>
 <body style="
     display: flex;
     flex-direction: column;
-    align-items: center;
-">
+    align-items: center; background-color: rgb(154, 178, 231);" >
+   <!--#region navegacion-->
+
     <nav data-bs-theme="dark" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+   
+
         <div class="container-fluid">
           <a class="navbar-brand" href="#">PW</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,12 +71,77 @@
           </div>
         </div>
       </nav>
+      <!--#enregion-->
       
-      <div class="card" style="width: 500px; top:80px; box-shadow: 1px 1px 10px rgb(255, 114, 236);">
-        <img src="..." class="card-img-top" alt="...">
+      <div class="card claseTarjeta">
+        <h5>Acerca de</h5>
+        <img id="avatar"
+         src="https://picsum.photos/id/967/180/180" class="rounded-circle" alt="...">
+
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        
+          <p class="card-text">Programación web implica desarrollar aplicaciones y sitios en línea usando lenguajes como HTML, CSS, y JavaScript, 
+            esencial para experiencias web interactivas y carreras tecnológicas prometedoras.
+          </p>
+          
+          <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+            Example element with utilities
+          </div>
+
+          <br>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/rnmbxqS1nRo?si=UgmAwARMp6XB24bj" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          <form>
+            <h5>Contacto</h5>
+            <div class="mb-3">
+              <label for="Nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="Nombre" placeholder="Ingrese su nombre">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Correo Elctrónico</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su correo electrónico">
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+            </div>
+           
+            <div class="mb-3">
+              <label for="Edad" class="form-label">Edad</label>
+              <input type="text" class="form-control" id="Edad" placeholder="Ingrese su edad">
+            </div>
+
+            <div class="mb-3">
+              <label for="dateNacimiento" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="dateNacimiento">
+            </div>
+
+            <div class="form-floating"> Mensaje
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Ingrese su mensaje</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Default radio
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Default checked radio
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+
+
+          <br>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
