@@ -1,0 +1,26 @@
+/*Selector de HTML*/
+h1{
+    color: rgb(136, 81, 136);
+    text-align: center;
+}
+
+/*Selector de clase*/
+.azul{
+    color: rgb(164, 164, 243) !important; /*el !important será siempre de último recurso*/
+    text-align: right;
+}
+
+/*Selector de id*/
+#green{
+    color: rgb(160, 204, 160);
+    font-variant: small-caps;
+}
+
+
+ul> li{
+    background-color: rgb(173, 173, 173);
+}
+
+ul>li:first-child{
+    background-color: rgb(222, 185, 247);
+}
