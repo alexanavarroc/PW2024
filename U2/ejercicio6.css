@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
     background-color: rgb(255, 163, 255);
+
 }
 
 .izq{
@@ -10,6 +11,7 @@
     width: 33.33%;
     background-color: rgb(190, 151, 226);
     height: 100%;
+
 }
 
 .cen{
@@ -17,6 +19,7 @@
     width: 33.33;
     background-color: lightblue;
     height: 100%;
+
 }
 
 .der{
