@@ -1,0 +1,43 @@
+@media(min-width: 0px) and (max-width: 480px){
+    .contenedor{
+        background-color: peachpuff;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    .contenedor{
+        background-color: rgb(228, 240, 176);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1279px){
+    .contenedor{
+        background-color: rgb(232, 176, 240);
+    }
+}
+
+@media (min-width: 1280px){
+    .contenedor{
+        background-color: rgb(31, 158, 148);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: darkgray;
+        
+    }
+    p{
+        color: royalblue;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: rgb(245, 255, 198);
+        
+    }
+    p{
+        color: rgb(255, 213, 194);
+    }
+}
