@@ -1,0 +1,9 @@
+@media print{
+    .no-print{
+        display: none;
+    }
+    h1{
+        font-size: 14px;
+    }
+}
+
