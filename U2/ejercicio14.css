@@ -4,9 +4,18 @@ body{
     text-align: center;
     letter-spacing: 0px;
     font: medium;
-    font-family:cursive;
-    background-image:url(https://i.pinimg.com/originals/54/b5/b5/54b5b572a814ce721e1b01adabed5c84.gif);
-    background-size: auto;
+    
+    background-image:url(https://i.pinimg.com/originals/96/bf/17/96bf173093c1728cc2f24c20dfd6cb44.gif);
+    background-size:cover;
        
        }
 
+.card{
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(192, 207, 185);   
+ }
+
+#margen{
+    margin-top: 50px;
+        }
