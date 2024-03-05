@@ -2,12 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Componente1 from './Componente1';
+import Componente2 from './Componente2';
+import Componente3 from './Componente3';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+   {/* <App /> */}
+   <Componente1 />
+   <Componente1 />
+   <Componente1 />
+
+   <Componente2 />
+   <Componente3 />
+
+
   </React.StrictMode>
 );
 
