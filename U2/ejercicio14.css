@@ -1,0 +1,21 @@
+body{
+    background-color: rgba(210, 255, 217, 0.863);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: 0px;
+    font: medium;
+    
+    background-image:url(https://i.pinimg.com/originals/96/bf/17/96bf173093c1728cc2f24c20dfd6cb44.gif);
+    background-size:cover;
+       
+       }
+
+.card{
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(192, 207, 185);   
+ }
+
+#margen{
+    margin-top: 50px;
+        }
