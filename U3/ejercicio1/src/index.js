@@ -8,13 +8,16 @@ import Componente2 from './Componente2';
 import Componente3 from './Componente3';
 import Ejercicio2 from './Ejercicio2/Ejercicio2';
 import Ejercicio3 from './Ejercicio3/Ejercicio3';
+import Ejercicio4 from './Ejercicio4/Ejercicio4';
 import './index.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Ejercicio3/>
+    <Ejercicio4 imagen="https://picsum.photos/id/42/400/300" titulo="Titulo" texto="Esto es un texto dentro de una card :)"/>
+
+    {/* <Ejercicio3/> */}
     {/* <Ejercicio2 nombre="Alexa" año="2024"> </Ejercicio2> */}
     {/* <Ejercicio2 nombre="Daniel"> </Ejercicio2> */}
     {/* <Ejercicio2 año="2024"> </Ejercicio2> */}
