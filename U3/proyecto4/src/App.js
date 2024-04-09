@@ -1,8 +1,8 @@
-import Ejercicio12 from "./Ejercicio12";
+import Ejercicio13 from "./Ejercicio13";
 function App() {
   return (
    <>
-   <Ejercicio12 />
+   <Ejercicio13 />
    </>
   );
 }
