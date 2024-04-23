@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
 import Ejercicio19a from './Ejercicio19/Ejercicio19a';
 import Ejercicio19b from './Ejercicio19/Ejercicio19b';
+import Ejercicio20a from './Ejercicio20/Ejercicio20a';
+import Ejercicio20b from './Ejercicio20/Ejercicio20b';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,8 +14,13 @@ root.render(
     <BrowserRouter>
       <Routes>
           <Route path='/Ejercicio19a' element={<Ejercicio19a/>} />
-          <Route path='/Ejercicio19b' element={<Ejercicio19b/>} />
+          <Route path='/Ejercicio19b/:nombre/:habilidad' element={<Ejercicio19b/>} />
+          
+          <Route path='/Ejercicio20a' element={<Ejercicio20a/>}/>
+          <Route path='/Ejercicio20b/:id' element={<Ejercicio20b />}/>
       </Routes>
+
+
     </BrowserRouter>
   </React.StrictMode>
 );
