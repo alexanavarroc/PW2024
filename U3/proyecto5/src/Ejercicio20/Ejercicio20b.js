@@ -31,6 +31,19 @@ export default function Ejercicio20b() {
     (item) => item.idUsuario === parseInt(id)
   );
 
+  if(usuarioSeleccionado === undefined){
+    return(
+      <div className="container">
+        <div className="row">
+          <h1>No se encontro el registro... 😭</h1>
+          <a href="/Ejercicio20a" className="btn btn-primary">
+            Regresar 
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="container">
       <div className="row">

@@ -7,6 +7,7 @@ import Ejercicio19a from './Ejercicio19/Ejercicio19a';
 import Ejercicio19b from './Ejercicio19/Ejercicio19b';
 import Ejercicio20a from './Ejercicio20/Ejercicio20a';
 import Ejercicio20b from './Ejercicio20/Ejercicio20b';
+import Ejercicio21 from './Ejercicio21/Ejercicio21';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,8 @@ root.render(
           
           <Route path='/Ejercicio20a' element={<Ejercicio20a/>}/>
           <Route path='/Ejercicio20b/:id' element={<Ejercicio20b />}/>
+          <Route path='/Ejercicio21' element={<Ejercicio21 />}/>
+
       </Routes>
 
 
