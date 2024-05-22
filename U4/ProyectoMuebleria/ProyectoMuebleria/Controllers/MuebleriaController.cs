@@ -88,5 +88,87 @@ namespace ProyectoMuebleria.Controllers
             }
 
         }
+
+        // FABRICANTES
+
+        [HttpGet("ListadoFabricante")]
+        public async Task<IActionResult> ListadoFabricante()
+        {
+            var fabricantes = await _miContexto.Fabricantes.ToListAsync();
+            return Ok(fabricantes);
+        }
+
+        [HttpGet("DameFabricante")]
+        public async Task<IActionResult> DameFabricante(int idFabricante)
+        {
+            bool existe = await _miContexto.Fabricantes.Where(c => c.IdFabricante == idFabricante).AnyAsync();
+            if (existe)
+            {
+                Fabricante fabricante = await _miContexto.Fabricantes.Where(c => c.IdFabricante == idFabricante).FirstOrDefaultAsync();
+                return Ok(fabricante);
+            }
+            else
+            {
+                return BadRequest("No se encontro el fabricante");
+            }
+        }
+
+
+        [HttpPost("AgregaFabricante")]
+        public async Task<ActionResult> AgregaFabricante(string nombreAgregar)
+        {
+            bool existeFabricante = await _miContexto.Fabricantes.Where(c => c.Nombre.ToLower().Trim() == nombreAgregar.ToLower()).AnyAsync();
+            if (existeFabricante)
+            {
+                return BadRequest("Ya existe el fabricante");
+            }
+            else
+            {
+                Fabricante nuevoFabricante = new Fabricante();
+                nuevoFabricante.Nombre = nombreAgregar;
+                _miContexto.Fabricantes.Add(nuevoFabricante);
+                _miContexto.SaveChanges();
+                return Ok(nuevoFabricante);
+            }
+        }
+
+        [HttpPut("ActializarFabricante")]
+        public async Task<IActionResult> ActualizarFabricante(int idFabricanteActualizar, string nombreActualizado)
+        {
+            bool existe = await _miContexto.Fabricantes.Where(c => c.IdFabricante == idFabricanteActualizar).AnyAsync();
+            if (existe)
+            {
+                Fabricante fabricanteActualizar = await _miContexto.Fabricantes.Where(c => c.IdFabricante == idFabricanteActualizar).FirstOrDefaultAsync();
+                fabricanteActualizar.Nombre = nombreActualizado;
+                _miContexto.SaveChanges();
+                return Ok(fabricanteActualizar);
+            }
+            else
+            {
+                return BadRequest("No se encontro el fabricnate a actualizar");
+            }
+        }
+
+        [HttpDelete("EliminaFabricante")]
+        public async Task<IActionResult> EliminaFabricante(int idFabricanteEliminar)
+        {
+            Fabricante fabricanteEliminar = await _miContexto.Fabricantes.Where(c => c.IdFabricante == idFabricanteEliminar).FirstOrDefaultAsync();
+            if (fabricanteEliminar != null)
+            {
+                _miContexto.Remove(fabricanteEliminar);
+                _miContexto.SaveChanges();
+                return Ok("Fabricante Eliminado");
+            }
+            else
+            {
+                return BadRequest("No se encontro el fabricante");
+            }
+        }
+
+
     }
+
 }
+
+
+
