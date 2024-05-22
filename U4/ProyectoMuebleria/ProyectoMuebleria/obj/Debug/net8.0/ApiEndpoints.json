@@ -22,8 +22,45 @@
   },
   {
     "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "ActualizarFabricante",
+    "RelativePath": "Muebleria/ActualizarFabricante",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFabricanteActualizar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombreActualizado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
     "Method": "AgregarCategoria",
     "RelativePath": "Muebleria/AgregaCategoria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombreAgregar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "AgregaFabricante",
+    "RelativePath": "Muebleria/AgregaFabricante",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -54,6 +91,22 @@
   },
   {
     "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "DameFabricante",
+    "RelativePath": "Muebleria/DameFabricante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFabricante",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
     "Method": "EliminaCategoria",
     "RelativePath": "Muebleria/EliminaCategoria",
     "HttpMethod": "DELETE",
@@ -62,6 +115,22 @@
     "Parameters": [
       {
         "Name": "idCategoriaEliminar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "EliminaFabricante",
+    "RelativePath": "Muebleria/EliminaFabricante",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFabricanteEliminar",
         "Type": "System.Int32",
         "IsRequired": false
       }
