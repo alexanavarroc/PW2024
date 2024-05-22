@@ -89,6 +89,18 @@ namespace ProyectoMuebleria.Controllers
 
         }
 
+<<<<<<< HEAD
+=======
+        // FABRICANTES
+
+        [HttpGet("ListadoFabricante")]
+        public async Task<IActionResult> ListadoFabricante()
+        {
+            var fabricantes = await _miContexto.Fabricantes.ToListAsync();
+            return Ok(fabricantes);
+        }
+
+>>>>>>> 1432ee932c39520ec392a91ae214880b64ff8eb3
         [HttpGet("DameFabricante")]
         public async Task<IActionResult> DameFabricante(int idFabricante)
         {
@@ -123,7 +135,11 @@ namespace ProyectoMuebleria.Controllers
             }
         }
 
+<<<<<<< HEAD
         [HttpPut("ActualizarFabricante")]
+=======
+        [HttpPut("ActializarFabricante")]
+>>>>>>> 1432ee932c39520ec392a91ae214880b64ff8eb3
         public async Task<IActionResult> ActualizarFabricante(int idFabricanteActualizar, string nombreActualizado)
         {
             bool existe = await _miContexto.Fabricantes.Where(c => c.IdFabricante == idFabricanteActualizar).AnyAsync();
@@ -136,7 +152,11 @@ namespace ProyectoMuebleria.Controllers
             }
             else
             {
+<<<<<<< HEAD
                 return BadRequest("No se encontro el fabricante a actualizar");
+=======
+                return BadRequest("No se encontro el fabricnate a actualizar");
+>>>>>>> 1432ee932c39520ec392a91ae214880b64ff8eb3
             }
         }
 
@@ -155,5 +175,14 @@ namespace ProyectoMuebleria.Controllers
                 return BadRequest("No se encontro el fabricante");
             }
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1432ee932c39520ec392a91ae214880b64ff8eb3
     }
+
 }
+
+
+

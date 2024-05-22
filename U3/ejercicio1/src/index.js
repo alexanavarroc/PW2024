@@ -85,24 +85,24 @@ root.render(
 
 
 
-    {/* <Ejercicio4b alert="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tipoA="alert alert-primary"/>
+    <Ejercicio4b alert="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tipoA="alert alert-primary"/>
     <Ejercicio4b alert="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tipoA="alert alert-dark"/>
     <Ejercicio4b alert="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tipoA="alert alert-danger"/>
-    <Ejercicio4b alert="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tipoA="alert alert-warning"/> */}
+    <Ejercicio4b alert="Lorem ipsum dolor sit amet, consectetur adipiscing elit." tipoA="alert alert-warning"/>
 
-    {/* <Ejercicio3/> */}
-    {/* <Ejercicio2 nombre="Alexa" año="2024"> </Ejercicio2> */}
-    {/* <Ejercicio2 nombre="Daniel"> </Ejercicio2> */}
-    {/* <Ejercicio2 año="2024"> </Ejercicio2> */}
+    <Ejercicio3/>
+    <Ejercicio2 nombre="Alexa" año="2024"> </Ejercicio2>
+    <Ejercicio2 nombre="Daniel"> </Ejercicio2>
+    <Ejercicio2 año="2024"> </Ejercicio2>
  
 
-   {/* <App /> */}
-   {/* <Componente1 /> */}
-   {/* <Componente1 /> */}
-   {/* <Componente1 /> */}
+   <App />
+   <Componente1 />
+   <Componente1 />
+   <Componente1 />
 
-   {/* <Componente2 /> */}
-   {/* <Componente3 /> */}
+   <Componente2 />
+   <Componente3 />
 
 
   </React.StrictMode>
