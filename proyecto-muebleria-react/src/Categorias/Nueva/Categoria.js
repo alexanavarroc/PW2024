@@ -16,7 +16,7 @@ export default function Categoria() {
     try {
       // Hacer el request POST
       const response = await axios.post(
-        "https://localhost:7152/Muebleria/AgregaCategoria?nombreAgregar=" + // cambiar puerto
+        "https://localhost:7152/Muebleria/AgregaCategoria?nombreAgregar=" +
           nombreCategoria,
       );
       if (response.status === 200) {
@@ -37,15 +37,13 @@ export default function Categoria() {
       <form>
         <div class="form-group">
           <label for="Nombre">Nombre de Categoria</label>
-          <input type="text" class="form-control" id="Nombre"
-          onChange={(e) => guardaCategoriaEnEstado} />
+          <input type="text" class="form-control" id="Nombre" onChange={(e)=> guardaCategoriaEnEstado (e)} />
         </div>
         <div className="posicion-botones ">
           <a href="/CategoriasListado" className="btn btn-secondary">
             Cancelar
           </a>
-          <button type="button" className="btn btn-primary"
-          onClick={() => guardaCategoria()}>
+          <button type="button" className="btn btn-primary" onClick={() => guardaCategoria ()}>
             Guardar
           </button>
         </div>

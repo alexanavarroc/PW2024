@@ -1,18 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
 import ModalEditarCategoria from "./ModalEditarCategoria";
 import ModalEliminarCategoria from "./ModalEliminarCategoria";
-
+ 
 export default function CategoriasListado() {
   const [muestraModalEditar, setMuestraModalEditar] = useState(false);
-  const handleMuestraEdtiar = () => setMuestraModalEditar(true);
+  const handleMuestraEditar = () => setMuestraModalEditar(true);
   const handleCierraEditar = () => setMuestraModalEditar(false);
-
+ 
   const [muestraModalEliminar, setMuestraModalEliminar] = useState(false);
   const handleMuestraEliminar = () => setMuestraModalEliminar(true);
   const handleCierraEliminar = () => setMuestraModalEliminar(false);
-
+ 
+  const [categorias, setCategorias] = useState([]);
+  const [cargando, setCargando] = useState(true);
+  const [error, setError] = useState(null);
+ 
+  const [itemSeleccionado, setitemSelecionada] = useState({
+    idCategoria: 0,
+    nombre: "",
+  });
+ 
+  useEffect(() => {
+    const obtenListadoCategorias = async () => {
+      try {
+        // Hacer el request GET
+        const response = await axios.get(
+          "https://localhost:7152/Muebleria/ListadoCategorias",
+        );
+        // Actualizar el estado de datos
+        setCategorias(response.data);
+        setCargando(false);
+      } catch (error) {
+        // En caso de error
+        setError(error);
+        setCargando(false);
+      }
+    };
+    // llamar a la funcion
+    obtenListadoCategorias();
+  }, []);
+ 
+  function eliminarCategoriaSeleccionada(item) {
+    setitemSelecionada(item);
+    handleMuestraEliminar();
+  }
+ 
+  function editarCategoriaSeleccionada(item) {
+    setitemSelecionada(item);
+    handleMuestraEditar();
+  }
+ 
+  if (cargando) {
+    return <div>Cargando...</div>;
+  }
+ 
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+ 
   return (
     <div className="container-fluid">
       <h1>Listado de Categorias</h1>
@@ -69,34 +117,42 @@ export default function CategoriasListado() {
             </tr>
           </thead>
           <tbody>
-            <tr className="odd">
-              <td> </td>
-              <td> </td>
-              <td style={{ textAlign: "center" }}>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => handleMuestraEdtiar()}
-                >
-                  <FontAwesomeIcon icon={faPencil} /> Editar
-                </button>
-                &nbsp;&nbsp;&nbsp;
-                <button
-                  className="btn btn-danger"
-                  onClick={() => handleMuestraEliminar()}
-                >
-                  <FontAwesomeIcon icon={faTrash} /> Eliminar
-                </button>
-              </td>
-            </tr>
+            {categorias.map((item) => {
+                return (
+                  <tr className="odd">
+                    <td>{item.idCategoria}</td>
+                    <td>{item.nombre}</td>
+                    <td style={{ textAlign: "center" }}>
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => editarCategoriaSeleccionada(item)}
+                      >
+                        <FontAwesomeIcon icon={faPencil} /> Editar
+                      </button>
+                      &nbsp;&nbsp;&nbsp;
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => eliminarCategoriaSeleccionada(item)}
+                      >
+                        <FontAwesomeIcon icon={faTrash} /> Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })
+            }
+           
           </tbody>
         </table>
       </div>
       <ModalEditarCategoria
         mostrar={muestraModalEditar}
+        item={itemSeleccionado}
         handleCerrar={handleCierraEditar}
       />
       <ModalEliminarCategoria
         mostrar={muestraModalEliminar}
+        item={itemSeleccionado}
         handleCerrar={handleCierraEliminar}
       />
     </div>

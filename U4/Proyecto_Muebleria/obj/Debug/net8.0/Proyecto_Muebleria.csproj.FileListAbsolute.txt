@@ -136,3 +136,6 @@ C:\Repositorios\PW2024\U4\Proyecto_Muebleria\obj\Debug\net8.0\Proyecto_Muebleria
 C:\Repositorios\PW2024\U4\Proyecto_Muebleria\obj\Debug\net8.0\Proyecto_Muebleria.genruntimeconfig.cache
 C:\Repositorios\PW2024\U4\Proyecto_Muebleria\obj\Debug\net8.0\ref\Proyecto_Muebleria.dll
 C:\Repositorios\PW2024\U4\Proyecto_Muebleria\bin\Debug\net8.0\System.Web.Cors.dll
+C:\repo\PW2024\U4\Proyecto_Muebleria\obj\Debug\net8.0\Proyecto_Muebleria.dll
+C:\repo\PW2024\U4\Proyecto_Muebleria\obj\Debug\net8.0\refint\Proyecto_Muebleria.dll
+C:\repo\PW2024\U4\Proyecto_Muebleria\obj\Debug\net8.0\Proyecto_Muebleria.pdb
