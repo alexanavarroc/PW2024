@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Repositorios\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj": {}
+    "C:\\repo\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj": {}
   },
   "projects": {
-    "C:\\Repositorios\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj": {
+    "C:\\repo\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Repositorios\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj",
+        "projectUniqueName": "C:\\repo\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj",
         "projectName": "Proyecto_Muebleria",
-        "projectPath": "C:\\Repositorios\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj",
-        "packagesPath": "C:\\Users\\anama\\.nuget\\packages\\",
-        "outputPath": "C:\\Repositorios\\PW2024\\U4\\Proyecto_Muebleria\\obj\\",
+        "projectPath": "C:\\repo\\PW2024\\U4\\Proyecto_Muebleria\\Proyecto_Muebleria.csproj",
+        "packagesPath": "C:\\Users\\AlumnoL13\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\PW2024\\U4\\Proyecto_Muebleria\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\anama\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlumnoL13\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

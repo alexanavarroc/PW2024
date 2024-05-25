@@ -125,7 +125,7 @@ namespace ProyectoMuebleria.Controllers
             bool existeFabricante = await _miContexto.Fabricantes.AnyAsync(f => f.Nombre.ToLower().Trim() == nombreAgregar.ToLower().Trim());
             if (existeFabricante)
             {
-                return BadRequest("El fabricante ya existe");
+                return BadRequest("El fabricante ya existe:(");
             }
             else
             {
@@ -149,7 +149,7 @@ namespace ProyectoMuebleria.Controllers
             }
             else
             {
-                return BadRequest("No se encontró el fabricante a actualizar");
+                return BadRequest("No se encontró el fabricante a actualizar:(");
             }
         }
 
@@ -161,7 +161,7 @@ namespace ProyectoMuebleria.Controllers
             {
                 _miContexto.Fabricantes.Remove(fabricanteEliminar);
                 await _miContexto.SaveChangesAsync();
-                return Ok("Fabricante Eliminado");
+                return Ok("Fabricante Eliminado:)");
             }
             else
             {

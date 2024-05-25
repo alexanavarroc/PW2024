@@ -22,7 +22,7 @@ export default function ModalEditarCategoria({ mostrar, item, handleCerrar }) {
     try {
       // Hacer el request PUT
       const response = await axios.put(
-        "https://localhost:7152/Muebleria/ActualizarCategoria?idCategoriaActualizar=" +
+        "https://localhost:7010/Muebleria/ActualizarCategoria?idCategoriaActualizar=" +
           categoriaEditada.idCategoria +
           "&nombreActualizado=" +
           categoriaEditada.nombre,

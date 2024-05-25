@@ -28,7 +28,7 @@ export default function CategoriasListado() {
       try {
         // Hacer el request GET
         const response = await axios.get(
-          "https://localhost:7152/Muebleria/ListadoCategorias",
+          "https://localhost:7010/Muebleria/ListadoCategorias",
         );
         // Actualizar el estado de datos
         setCategorias(response.data);
