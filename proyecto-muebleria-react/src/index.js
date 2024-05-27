@@ -7,7 +7,9 @@ import reportWebVitals from "./reportWebVitals";
 import LayoutBase from "./Shared/LayoutBase/LayoutBase";
 import CategoriasListado from "./Categorias/Listado/CategoriasListado";
 import FabricantesListado from "./Fabricantes/Listado/FabricantesListado";
+
 import Categoria from "./Categorias/Nueva/Categoria";
+import Fabricante from "./Categorias/Nueva/Fabricante";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<LayoutBase />}>
           <Route path="/FabricantesListado" element={<FabricantesListado />} />
+          <Route path="/FabricantesListado/Nueva" element={<Fabricante />} />
           <Route path="/CategoriasListado" element={<CategoriasListado />} />
           <Route path="/CategoriasListado/Nueva" element={<Categoria />} />
         </Route>
