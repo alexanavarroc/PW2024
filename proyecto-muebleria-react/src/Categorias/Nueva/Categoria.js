@@ -16,7 +16,7 @@ export default function Categoria() {
     try {
       // Hacer el request POST
       const response = await axios.post(
-        "https://localhost:7152/Muebleria/AgregaCategoria?nombreAgregar=" +
+        "https://localhost:7010/Muebleria/AgregaCategoria?nombreAgregar=" +
           nombreCategoria,
       );
       if (response.status === 200) {

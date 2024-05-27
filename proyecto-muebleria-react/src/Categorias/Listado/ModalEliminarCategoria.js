@@ -16,7 +16,7 @@ export default function ModalEliminarCategoria({
     try {
       // Hacer el request DELETE
       const response = await axios.delete(
-        "https://localhost:7152/Muebleria/EliminaCategoria?idCategoriaEliminar=" +
+        "https://localhost:7010/Muebleria/EliminaCategoria?idCategoriaEliminar=" +
           item.idCategoria,
       );
       if (response.status === 200) {

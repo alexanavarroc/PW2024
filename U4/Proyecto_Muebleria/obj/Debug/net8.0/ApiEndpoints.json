@@ -1,0 +1,180 @@
+[
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "ActualizarCategoria",
+    "RelativePath": "Muebleria/ActualizarCategoria",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoriaActualizar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombreActualizado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "ActualizarFabricante",
+    "RelativePath": "Muebleria/ActualizarFabricante",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFabricanteActualizar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombreActualizado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "AgregarCategoria",
+    "RelativePath": "Muebleria/AgregaCategoria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombreAgregar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "AgregarFabricante",
+    "RelativePath": "Muebleria/AgregaFabricante",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombreAgregar",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "DameCategoria",
+    "RelativePath": "Muebleria/DameCategoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoria",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "DameFabricante",
+    "RelativePath": "Muebleria/DameFabricante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFabricante",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "EliminarCategoria",
+    "RelativePath": "Muebleria/EliminaCategoria",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoriaEliminar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "EliminarFabricante",
+    "RelativePath": "Muebleria/EliminaFabricante",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFabricanteEliminar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "ListadoCategorias",
+    "RelativePath": "Muebleria/ListadoCategorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMuebleria.Controllers.MuebleriaController",
+    "Method": "ListadoFabricantes",
+    "RelativePath": "Muebleria/ListadoFabricantes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Proyecto_Muebleria.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Proyecto_Muebleria.WeatherForecast, Proyecto_Muebleria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
