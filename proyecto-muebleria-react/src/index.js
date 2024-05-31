@@ -18,8 +18,9 @@ root.render(
       <Routes>
         <Route path="/" element={<LayoutBase />}>
           <Route path="/FabricantesListado" element={<FabricantesListado />} />
-          <Route path="/FabricantesListado/Nueva" element={<Fabricante />} />
           <Route path="/CategoriasListado" element={<CategoriasListado />} />
+          <Route path="/FabricantesListado/Nueva" element={<Fabricante />} />
+          
           <Route path="/CategoriasListado/Nueva" element={<Categoria />} />
         </Route>
       </Routes>

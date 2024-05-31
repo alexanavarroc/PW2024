@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
-import ModalEditarFabricante from "./ModalEditarFabricante";
-import ModalEliminarFabricante from "./ModalEliminarFabricante";
+import ModalEditarFabricantes from "./ModalEditarFabricante";
+import ModalEliminarFabricantes from "./ModalEliminarFabricante";
  
-export default function FabricantesListado() {
+export default function FabricanteListado() {
   const [muestraModalEditar, setMuestraModalEditar] = useState(false);
   const handleMuestraEditar = () => setMuestraModalEditar(true);
   const handleCierraEditar = () => setMuestraModalEditar(false);
@@ -18,8 +18,8 @@ export default function FabricantesListado() {
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
  
-  const [itemFabricante, setitemFabricante] = useState({
-    IdFabricante: 0,
+  const [itemSeleccionado, setitemSelecionado] = useState({
+    idCategoria: 0,
     nombre: "",
   });
  
@@ -40,18 +40,8 @@ export default function FabricantesListado() {
       }
     };
     // llamar a la funcion
-    obtenListadoFabricantes ();
+    obtenListadoFabricantes();
   }, []);
- 
-  function eliminarFabricanteSeleccionada(item) {
-    setitemFabricante(item);
-    handleMuestraEliminar();
-  }
- 
-  function editarFabricanteSeleccionada(item) {
-    setitemFabricante(item);
-    handleMuestraEditar();
-  }
  
   if (cargando) {
     return <div>Cargando...</div>;
@@ -61,12 +51,21 @@ export default function FabricantesListado() {
     return <div>Error: {error.message}</div>;
   }
  
+  function eliminarFabricanteSeleccionado(item) {
+    setitemSelecionado(item);
+    handleMuestraEliminar();
+  }
+ 
+  function editarFabricanteSeleccionado(item) {
+    setitemSelecionado(item);
+    handleMuestraEditar();
+  }
   return (
     <div className="container-fluid">
       <h1>Listado de Fabricantes</h1>
       <div style={{ textAlign: "right" }} className="mb-3">
         <a href="/FabricantesListado/Nueva" className="btn btn-success">
-          Nuevo fabricante
+          Nuevo Fabricante
         </a>
       </div>
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -103,26 +102,36 @@ export default function FabricantesListado() {
               >
                 Nombre
               </th>
-            
+              <th
+                className="sorting"
+                tabIndex="0"
+                aria-controls="dataTable"
+                rowSpan="1"
+                colSpan="1"
+                aria-label="Position: activate to sort column ascending"
+                style={{ width: "30%", textAlign: "center" }}
+              >
+                Acciones
+              </th>
             </tr>
           </thead>
           <tbody>
             {fabricantes.map((item) => {
                 return (
                   <tr className="odd">
-                    <td>{item.IdFabricante}</td>
+                    <td>{item.idFabricante}</td>
                     <td>{item.nombre}</td>
                     <td style={{ textAlign: "center" }}>
                       <button
                         className="btn btn-primary"
-                        onClick={() => editarFabricanteSeleccionada(item)}
+                        onClick={() => editarFabricanteSeleccionado(item)}
                       >
                         <FontAwesomeIcon icon={faPencil} /> Editar
                       </button>
                       &nbsp;&nbsp;&nbsp;
                       <button
                         className="btn btn-danger"
-                        onClick={() => eliminarFabricanteSeleccionada(item)}
+                        onClick={() => eliminarFabricanteSeleccionado(item)}
                       >
                         <FontAwesomeIcon icon={faTrash} /> Eliminar
                       </button>
@@ -135,14 +144,14 @@ export default function FabricantesListado() {
           </tbody>
         </table>
       </div>
-      <ModalEditarFabricante
+      <ModalEditarFabricantes
         mostrar={muestraModalEditar}
-        item={itemFabricante}
+        item={itemSeleccionado}
         handleCerrar={handleCierraEditar}
       />
-      <ModalEliminarFabricante
+      <ModalEliminarFabricantes
         mostrar={muestraModalEliminar}
-        item={itemFabricante}
+        item={itemSeleccionado}
         handleCerrar={handleCierraEliminar}
       />
     </div>
