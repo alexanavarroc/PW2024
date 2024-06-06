@@ -158,6 +158,68 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Proyecto_Muebleria.Controllers.ProductosController",
+    "Method": "AgregaProducto",
+    "RelativePath": "Productos/AgregaProducto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombreAgregar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "descripcionAgregar",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idFabricanteAgregar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idCategoriaAgregar",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "precioAgregar",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Proyecto_Muebleria.Controllers.ProductosController",
+    "Method": "DameProducto",
+    "RelativePath": "Productos/DameProducto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProducto",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Proyecto_Muebleria.Controllers.ProductosController",
+    "Method": "ListadoProductos",
+    "RelativePath": "Productos/ListadoProductos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Proyecto_Muebleria.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

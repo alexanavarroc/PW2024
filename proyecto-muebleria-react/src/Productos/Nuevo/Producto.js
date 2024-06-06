@@ -29,7 +29,7 @@ export default function Producto() {
 
     try {
       const response = await axios.post(
-        "https://localhost:7152/Productos/AgregaProducto",
+        "https://localhost:7010/Productos/AgregaProducto",
         formData,
         {
           headers: {

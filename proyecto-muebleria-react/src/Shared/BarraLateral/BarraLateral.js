@@ -48,6 +48,13 @@ export default function BarraLateral() {
             <span>Fabricantes</span>
           </a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/ProductosListado">
+            <i className="fas fa-fw fa-box"></i>
+            <span>Productos</span>
+          </a>
+        </li>
+        
         {/* Mensaje de barra lateral */}
         <div className="sidebar-card d-none d-lg-flex mt-5">
           <p className="text-center mb-2">

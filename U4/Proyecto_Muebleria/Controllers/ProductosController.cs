@@ -18,8 +18,16 @@ namespace Proyecto_Muebleria.Controllers
         [HttpGet("ListadoProductos")]
         public async Task<IActionResult> ListadoProductos()
         {
+            try
+            {
             var categorias = await _miContexto.Productos.ToListAsync();
             return Ok(categorias);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("DameProducto")]
@@ -45,6 +53,9 @@ namespace Proyecto_Muebleria.Controllers
             [FromForm] int idCategoriaAgregar,
             [FromForm] decimal precioAgregar)
         {
+            string modelo3DAgregar = "";
+            string foto1Agregar = "";
+            string foto2Agregar = "";
             var files = HttpContext.Request.Form.Files;
             if (files == null || files.Count == 0)
             {
@@ -53,7 +64,7 @@ namespace Proyecto_Muebleria.Controllers
 
             foreach (var file in files)
             {
-                var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "UploadedFiles");
+                var folderPath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "UploadedFiles");
 
                 // Verificar que exista la carpeta
                 if (!Directory.Exists(folderPath))
@@ -72,10 +83,47 @@ namespace Proyecto_Muebleria.Controllers
                 {
                     await file.CopyToAsync(stream);
                 }
+                if (extension.ToLower() == ".glb")
+                {
+                    modelo3DAgregar = newFileName;
+                }
+                else
+                {
+                    if (foto1Agregar == string.Empty)
+                    {
+                        foto1Agregar = newFileName;
+                    }
+                    else
+                    {
+                        foto2Agregar = newFileName;
+                    }
+                }
+            
             }
 
             //por hacer
+
             //guardar en bd
+            Producto nuevoProducto = new Producto();
+            nuevoProducto.Nombre = nombreAgregar;
+            nuevoProducto.Descripcion = descripcionAgregar;
+            nuevoProducto.IdFabricante = idFabricanteAgregar;
+            nuevoProducto.IdCategoria = idCategoriaAgregar;
+            nuevoProducto.Precio = precioAgregar;
+            nuevoProducto.Modelo3D = modelo3DAgregar;
+            nuevoProducto.Foto1 = foto1Agregar;
+            nuevoProducto.Foto2 = foto2Agregar;
+
+            try
+            {
+                _miContexto.Productos.Add(nuevoProducto);
+                await _miContexto.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
 
             return Ok(new
             {

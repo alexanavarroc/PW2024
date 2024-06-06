@@ -10,6 +10,8 @@ import FabricantesListado from "./Fabricantes/Listado/FabricantesListado";
 
 import Categoria from "./Categorias/Nueva/Categoria";
 import Fabricante from "./Categorias/Nueva/Fabricante";
+import Producto from "./Productos/Nuevo/Producto";
+import ProductosListado from "./Productos/Listado/ProductosListado";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +24,8 @@ root.render(
           <Route path="/FabricantesListado/Nueva" element={<Fabricante />} />
           
           <Route path="/CategoriasListado/Nueva" element={<Categoria />} />
+          <Route path="/Productos/Nuevo" element={<Producto />} />
+          <Route path="/ProductosListado" element={<ProductosListado />} />
         </Route>
       </Routes>
     </BrowserRouter>
